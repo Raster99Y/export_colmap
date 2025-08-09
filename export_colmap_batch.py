@@ -999,7 +999,7 @@ class ExportSceneGUI(QtWidgets.QDialog):
 
         self.batchSizeSpBox = QtWidgets.QSpinBox()
         self.batchSizeSpBox.setMinimum(10000)
-        self.batchSizeSpBox.setMaximum(1000000)
+        self.batchSizeSpBox.setMaximum(100000000)
         self.batchSizeSpBox.setSingleStep(10000)
         self.batchSizeSpBox.setValue(defaults.batch_size)
 
@@ -1056,7 +1056,7 @@ class ExportSceneGUI(QtWidgets.QDialog):
 
         # 信息框
         memory_info = QtWidgets.QLabel()
-        memory_info.setText("💡 注意:\n• 若要生成PLY格式文件，请在高级设置中勾选export PLY\n• 可在高级设置中调节批次大小，默认为500000\n• 支持随时取消")
+        memory_info.setText("💡 注意:\n• 若要生成PLY格式文件，请在高级设置中勾选export PLY\n• 可在高级设置中调节批次大小，默认为500000\n• 可用最小批次为10000，最大批次为100000000")
         memory_info.setStyleSheet("""
             background-color: #e8f4fd; border: 1px solid #bee5eb; border-radius: 5px;
             padding: 10px; margin: 5px 0px; font-size: 11px; color: #0c5460;
